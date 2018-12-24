@@ -1,0 +1,9 @@
+/**
+ * Header
+ */
+
+.p-header {
+  @include mq-pc {}
+  @include mq-tab {}
+  @include mq-sp {}
+}

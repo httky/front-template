@@ -1,0 +1,9 @@
+/**
+ * Layout Footer
+ */
+
+.l-footer {
+  @include mq-pc {}
+  @include mq-tab {}
+  @include mq-sp {}
+}

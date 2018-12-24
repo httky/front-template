@@ -1,0 +1,49 @@
+<%- include('../_config') _%>
+<%
+// ページ個別設定
+page = {};
+page.id = 'top';
+
+page.title = '';
+page.description = '';
+page.keywords = '';
+
+page.ogpUrl = '';
+page.ogpTitle = '';
+page.ogpDescription = '';
+page.ogpImage = '';
+page.ogpSiteName = '';
+page.ogpType = '';
+page.ogpLocale = '';
+page.ogpAppID = '';
+
+page.bodyClass = [];
+page.styles = [];
+page.scripts = [(JS_PATH + page.id + '.js')];
+page.imagesPath =  IMAGES_PATH + page.id + '/';
+_%>
+<%- include('../parts/_head'); %>
+  <div class="media">
+    <div class="media_wrap">
+      <div id="youtube" class="media_source"></div>
+    </div>
+  </div>
+  <ul class="list">
+    <li class="list_item">
+      <div class="card">あのイーハトーヴォの岩礁の多い奇麗きれいな海岸へ行って今ごろありもしない卵をさがせというのはこれは慰労いろう休暇のつもりなのだ。</div>
+    </li>
+    <li class="list_item">
+      <div class="card">あのイーハトーヴォの岩礁の多い奇麗きれいな海岸へ行って今ごろありもしない卵をさがせというのはこれは慰労いろう休暇のつもりなのだ。</div>
+    </li>
+    <li class="list_item">
+      <div class="card">あのイーハトーヴォの岩礁の多い奇麗きれいな海岸へ行って今ごろありもしない卵をさがせというのはこれは慰労いろう休暇のつもりなのだ。あのイーハトーヴォの岩礁の多い奇麗きれいな海岸へ行って今ごろありもしない卵をさがせというのはこれは慰労いろう休暇のつもりなのだ。</div>
+    </li>
+  </ul>
+
+  <div class="action">
+    <a class="action_button c-button" href="/about/">
+      <sapn class="c-button_text">aboutページ</sapn>
+    </a>
+  </div>
+
+<%- include('../parts/_foot'); %>

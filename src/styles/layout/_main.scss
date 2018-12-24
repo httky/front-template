@@ -1,0 +1,9 @@
+/**
+ * Layout Main
+ */
+
+.l-main {
+  @include mq-pc {}
+  @include mq-tab {}
+  @include mq-sp {}
+}

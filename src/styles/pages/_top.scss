@@ -1,0 +1,82 @@
+/**
+ * Top page
+ */
+
+.page-top {
+  $imgPath: $IMG_PATH + 'top/';
+
+  @include mq-pc {}
+  @include mq-tab {}
+  @include mq-sp {}
+  
+  .media {
+    margin: 0 auto;
+    padding-top: 30px;
+    @include mq-tab-gt {
+      width: 600px;
+    }
+    @include mq-sp {
+      width: 300px;
+    }
+  }
+  .media_wrap {
+    padding-top: 56.25%;
+    width: 100%;
+    position: relative;
+  }
+  .media_source {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .media + .list {
+    padding-top: 30px;
+  }
+  
+  .list {
+    font-size: 0;
+    text-align: center;
+  }
+  .list_item {
+    box-sizing: border-box;
+    @include mq-tab-gt {
+      width: 30%;
+      max-width: 300px;
+      padding: 10px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    @include mq-sp {
+      padding: 10px 0;
+      margin: 0 auto;
+      width: 300px;
+      display: block;
+    }
+  }
+  .card {
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    padding: 8px;
+  }
+  
+  .action {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 300px;
+    @include mq-tab-gt {
+    }
+    @include mq-sp {
+    }
+  }
+  .action_button {
+    display: block;
+  }
+}

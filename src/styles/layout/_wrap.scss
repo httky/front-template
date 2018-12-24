@@ -1,0 +1,9 @@
+/**
+ * Layout Wrap
+ */
+
+.l-wrap {
+  @include mq-pc {}
+  @include mq-tab {}
+  @include mq-sp {}
+}

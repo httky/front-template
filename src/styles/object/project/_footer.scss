@@ -1,0 +1,9 @@
+/**
+ * Footer
+ */
+
+.p-footer {
+  @include mq-pc {}
+  @include mq-tab {}
+  @include mq-sp {}
+}
