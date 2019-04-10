@@ -320,3 +320,33 @@ export function zenNum2HanNum(_num) {
   num = num.replace(new RegExp('[^0-9]', 'g'), '');
   return num;
 }
+
+/**
+ * $.Deferredの Native実装
+ */
+export function defer() {
+  const d = {};
+  const p = new Promise((resolve, reject) => {
+    d.resolve = resolve;
+    d.reject = reject;
+  });
+
+  d.promise = () => p;
+
+  return d;
+}
+
+/**
+ * 指定秒待ってpromiseを返す
+ * @param {Number} time - ms
+ * @return {Promise}
+ */
+export function wait(time) {
+  const d = defer();
+
+  setTimeout(() => {
+    d.resolve();
+  }, time);
+
+  return d.promise();
+}

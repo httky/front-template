@@ -5,6 +5,7 @@
 import config from './_config';
 import mediaQueries from './modules/_MediaQueries';
 import ShareSNS from './modules/_ShareSNS';
+import { wait } from './modules/_utils';
 import { init as smInit } from './modules/_ScrollManager';
 import {
   isMobile,
@@ -25,6 +26,13 @@ import {
 $(() => {
   console.log('config', config);
   console.log(`media: current type ${mediaQueries.currentType}`);
+
+  // defferのtest
+  wait(2000).then(() => {
+    const target = document.createElement('div');
+    target.innerText = 'deffer!!!';
+    document.body.appendChild(target);
+  });
 
   // OS・ブラウザ判定
   const $html = $('html');
