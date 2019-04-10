@@ -1,6 +1,7 @@
 /**
  * @module utils
  */
+import Promise from 'es6-promise';
 
 /**
  * 親要素のボックスサイズに合わせてimgもしくはvideo要素をフィットさせる
