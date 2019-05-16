@@ -70,10 +70,10 @@ APIや画像のダミーは`/src/mock/`以下を利用します。
 4. 「メールアドレス」を自身のGoogleアカウント、「ユーザーに表示するサービス名」を任意（**ページ作成用など）に入力し「保存」をクリックします。
 5. 「アプリケーションの種類」は「その他」を選択し、「名前」は任意（**ページ作成用など）に入力し「作成」をクリックします。
 6. 認証情報ページで5で入力した名前の右にあるダウンロードをクリックしJSONファイルをダウンロードします。
-7. ダウンロードしたJSONファイルを`./src/data/client_secret.json`へ保存します。
+7. ダウンロードしたJSONファイルを`./tools/client_secret.json`へ保存します。
 8. コマンド`npm run data`を実行します。
 9. CLIに「Authorize this app by visiting this url:: ...」と表示されるのでアクセスし、アカウントを選択後、「許可」をクリックします。  
-   表示されるコードをCLIへ入力してください。入力後`./src/data/credentials.json`ファイルが作成されます。
+   表示されるコードをCLIへ入力してください。入力後`./tools/credentials.json`ファイルが作成されます。
 
 [Node.js Quickstart | Sheets API](https://developers.google.com/sheets/api/quickstart/nodejs?hl=ja)
 
