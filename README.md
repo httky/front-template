@@ -1,8 +1,8 @@
 Frontend Starter Kit
 ====================
 
-- node.js >= 8.9.0
-- npm >= 5.6.0
+- node.js >= 10.8.0
+- npm >= 6.10.0
 
 ## Setup
 ```
