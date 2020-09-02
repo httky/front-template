@@ -37,7 +37,7 @@
     "expose-loader": "^0.7.5",
     "express": "^4.16.3",
     "express-delay": "^0.2.0",
-    "googleapis": "^32.0.0",
+    "googleapis": "^39.1.0",
     "graceful-fs": "^4.1.11",
     "gsap": "^2.0.0",
     "gulp": "^3.9.1",
