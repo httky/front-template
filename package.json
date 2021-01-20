@@ -39,7 +39,7 @@
     "express-delay": "^0.2.0",
     "googleapis": "^32.0.0",
     "graceful-fs": "^4.1.11",
-    "gsap": "^2.0.0",
+    "gsap": "^3.6.0",
     "gulp": "^3.9.1",
     "gulp-changed": "^3.2.0",
     "gulp-concat": "^2.6.1",
