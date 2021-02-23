@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
-import proxyMiddleware from 'http-proxy-middleware';
+import { createProxyMiddleware } from 'http-proxy-middleware';
 import config from '../config';
 
 const browser = browserSync.create();
@@ -16,7 +16,7 @@ if (config.settings.apiServer) {
 gulp.task('server', beforeTasks, (callback) => {
   // API serverを使う場合、/apiのリクエストをプロキシ
   if (config.settings.apiServer) {
-    const apiProxy = proxyMiddleware('/api', {
+    const apiProxy = createProxyMiddleware('/api', {
       target: `http://localhost:${config.settings.apiServer.port}/`,
     });
     config.settings.server.middleware.push(apiProxy);
