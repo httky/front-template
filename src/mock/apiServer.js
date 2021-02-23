@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import delay from 'express-delay';
 import config from '../../config';
 
+const fs = require('fs');
+
 const PORT = config.settings.apiServer.port;
 const app = new Express();
 

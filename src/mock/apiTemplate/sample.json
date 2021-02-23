@@ -1,4 +1,4 @@
 {
   "id": "#{id}",
-  "imgPath": "/dummy/#{id}.jpg",
+  "imgPath": "/dummy/#{id}.jpg"
 }
