@@ -45,8 +45,8 @@ config.settings.sass.options.functions = {
   },
 };
 
-gulp.task('styles', () => {
-  const s = gulp
+export function styles() {
+  return gulp
     .src(config.paths.style.src)
     .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
     .pipe($.if(
@@ -62,5 +62,4 @@ gulp.task('styles', () => {
     .pipe($.if(config.settings.style.minify, $.csso()))
     .pipe($.if(config.settings.style.sourcemap, $.sourcemaps.write('./')))
     .pipe(gulp.dest(config.paths.style.dist));
-  return s;
-});
+}

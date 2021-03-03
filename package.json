@@ -16,6 +16,7 @@
     ]
   },
   "devDependencies": {
+    "@tiaanduplessis/gulp-prettier-eslint": "^1.0.0",
     "autoprefixer": "^8.5.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -40,7 +41,7 @@
     "googleapis": "^32.0.0",
     "graceful-fs": "^4.2.6",
     "gsap": "^2.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-changed": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
@@ -56,7 +57,6 @@
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
-    "gulp-prettier-eslint": "^1.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
