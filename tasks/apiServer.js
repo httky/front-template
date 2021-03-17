@@ -1,8 +1,7 @@
-import gulp from 'gulp';
-import apiServer from '../src/mock/apiServer';
+import _apiServer from '../src/mock/apiServer';
 
-gulp.task('apiServer', (callback) => {
-  apiServer(() => {
+export function apiServer(callback) {
+  _apiServer(() => {
     callback();
   });
-});
+}

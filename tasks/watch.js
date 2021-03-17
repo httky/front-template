@@ -2,28 +2,39 @@ import path from 'path';
 import gulp from 'gulp';
 import del from 'del';
 import gulpLoadPlugins from 'gulp-load-plugins';
-import runSequence from 'run-sequence';
+import { reloadServer } from '../tasks/server';
+import { copy } from '../tasks/copy';
+import { views } from '../tasks/views';
+import { styles } from '../tasks/styles';
+import { scripts } from '../tasks/scripts';
+import { images } from '../tasks/images';
 import config from '../config';
 
 const $ = gulpLoadPlugins();
 
-gulp.task('watch', (callback) => {
+export function watch(callback) {
   config.isWatch = true;
-  const imagesWatcher = $.watch(config.paths.image.watch, () => {
-    runSequence('images', 'server:reload');
-  });
-  const staticWatcher = $.watch(config.paths.static.watch, () => {
-    runSequence('copy', 'server:reload');
-  });
-  $.watch(config.paths.view.watch, () => {
-    runSequence('views', 'server:reload');
-  });
-  $.watch(config.paths.style.watch, () => {
-    runSequence('styles', 'server:reload');
-  });
-  $.watch(config.paths.script.watch, () => {
-    runSequence('scripts', 'server:reload');
-  });
+
+  const imagesWatcher = $.watch(
+    config.paths.image.watch,
+    gulp.series(images, reloadServer)
+  );
+  const staticWatcher = $.watch(
+    config.paths.static.watch,
+    gulp.series(copy, reloadServer)
+  );
+  $.watch(
+    config.paths.view.watch,
+    gulp.series(views, reloadServer)
+  );
+  $.watch(
+    config.paths.style.watch,
+    gulp.series(styles, reloadServer)
+  );
+  $.watch(
+    config.paths.script.watch,
+    gulp.series(scripts, reloadServer)
+  );
 
   imagesWatcher.on('unlink', (filePath) => {
     const filePathFromSrc = path.relative(config.paths.image.dir, filePath);
@@ -38,4 +49,4 @@ gulp.task('watch', (callback) => {
   });
 
   callback();
-});
+}
