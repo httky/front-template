@@ -21,6 +21,7 @@
     "IScroll": true,
   },
   "rules": {
+    "quotes": ["error", "single"],
     "eol-last": 0, // ファイルの最後には空行を入れる off
     "no-new": 0,// 変数代入を行わないインスタンス生成をしない off
     "no-mixed-operators": 0,// 計算で加減と乗除の混在を許可しない off

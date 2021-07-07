@@ -38,7 +38,7 @@ const paths = {
     libs: [
       `${ROOT}/node_modules/jquery/dist/jquery.min.js`,
       `${ROOT}/node_modules/lodash/lodash.min.js`,
-      `${ROOT}/node_modules/gsap/src/minified/TweenMax.min.js`,
+      `${ROOT}/node_modules/gsap/dist/gsap.min.js`,
       // `${ROOT}/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js`,
       // `${ROOT}/node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js`,
       // `${ROOT}/node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js`,
@@ -88,7 +88,7 @@ const constants = {
     gaID: '',
     ogpAppID: '',
   },
-  stag: {
+  stg: {
     url: 'http://staging.example.com/',
     apiUrl: '/api/',
     contentsPath: `/${CONTENTS_PATH}`,
@@ -96,7 +96,7 @@ const constants = {
     gaID: '',
     ogpAppID: '',
   },
-  prod: {
+  prd: {
     url: 'http://example.com/',
     apiUrl: '/api/',
     contentsPath: `/${CONTENTS_PATH}`,
@@ -209,9 +209,16 @@ const settings = {
         dateFormat: 'MMMM Do YYYY, h:mm:ss a',
       },
     },
+    // prettierEslint: {
+    //   eslintConfig: {
+    //     rules: {
+    //       quotes: ['error', 'single']
+    //     }
+    //   }
+    // }
   },
   dev: {},
-  stag: {
+  stg: {
     style: {
       minify: true,
       sourcemap: false,
@@ -224,7 +231,7 @@ const settings = {
       minify: false,
     },
   },
-  prod: {
+  prd: {
     style: {
       minify: true,
       sourcemap: false,

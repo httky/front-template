@@ -1,19 +1,30 @@
 import webpack from 'webpack';
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import config from './config';
 
 const webpackConfig = {
+  mode: 'none',
   output: {
     filename: '[name].js',
     sourceMapFilename: '[file].map',
   },
   module: {
     rules: [
-      {
-        test: /\.json$/,
-        loader: 'json-loader',
-        type: 'javascript/auto',
-      },
+      { test: /\.js$/, exclude: /node_modules|libs/, use: 'babel-loader' },
+      { test: /\.json$/, use: 'json-loader' },
     ],
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /node_modules|src\/scripts\/modules|src\/scripts\/components|_config.js/,
+          name: 'common',
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -21,25 +32,24 @@ const webpackConfig = {
       APP_ENV: JSON.stringify(config.env),
     }),
   ],
-  // webpack4
-  // optimization: {
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       commons: {
-  //         test: /node_modules|src\/scripts\/modules|src\/scripts\/components|_config.js/,
-  //         name: "common",
-  //         chunks: "all",
-  //         enforce: true,
-  //       },
-  //     },
-  //   }
-  // },
 };
 
 if (config.settings.script.sourcemap === true) {
   webpackConfig.devtool = 'source-map';
 }
 
-webpackConfig.mode = config.env === 'dev' ? 'development' : 'production'; // webpack4
+if (config.settings.script.Uglify === true) {
+  webpackConfig.plugins.push(new UglifyJsPlugin({
+    uglifyOptions: {
+      warnings: false,
+      // compress: {
+      //   warnings: false,
+      // },
+      // mangle: {
+      //   keep_fnames: true,
+      // },
+    },
+  }));
+}
 
 export default webpackConfig;
