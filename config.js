@@ -209,6 +209,13 @@ const settings = {
         dateFormat: 'MMMM Do YYYY, h:mm:ss a',
       },
     },
+    // prettierEslint: {
+    //   eslintConfig: {
+    //     rules: {
+    //       quotes: ['error', 'single']
+    //     }
+    //   }
+    // }
   },
   dev: {},
   stag: {
