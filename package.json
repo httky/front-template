@@ -68,7 +68,6 @@
     "json-loader": "^0.5.7",
     "lodash": "^4.17.21",
     "minimist": "^1.2.5",
-    "prettier-eslint-cli": "^5.0.0",
     "require-dir": "^1.2.0",
     "run-sequence": "^2.2.1",
     "scrollmagic": "^2.0.8",
