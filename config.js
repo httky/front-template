@@ -88,7 +88,7 @@ const constants = {
     gaID: '',
     ogpAppID: '',
   },
-  stag: {
+  stg: {
     url: 'http://staging.example.com/',
     apiUrl: '/api/',
     contentsPath: `/${CONTENTS_PATH}`,
@@ -96,7 +96,7 @@ const constants = {
     gaID: '',
     ogpAppID: '',
   },
-  prod: {
+  prd: {
     url: 'http://example.com/',
     apiUrl: '/api/',
     contentsPath: `/${CONTENTS_PATH}`,
@@ -218,7 +218,7 @@ const settings = {
     // }
   },
   dev: {},
-  stag: {
+  stg: {
     style: {
       minify: true,
       sourcemap: false,
@@ -231,7 +231,7 @@ const settings = {
       minify: false,
     },
   },
-  prod: {
+  prd: {
     style: {
       minify: true,
       sourcemap: false,

@@ -1,8 +1,8 @@
 Frontend Starter Kit
 ====================
 
-- node.js >= 8.9.0
-- npm >= 5.6.0
+- node.js >= 12.0.0
+- npm >= 6.14.9
 
 ## Setup
 ```
@@ -14,8 +14,8 @@ npm start
 ## Scripts
 - `start` 開発開始（監視）
 - `dev` ビルド（開発）
-- `stag` ビルド（ステージング）
-- `prod` ビルド（本番）
+- `stg` ビルド（ステージング）
+- `prd` ビルド（本番）
 - `lint` ソースチェック
 - `sharePage` シェア用ダミーページ作成
 - `data` ページ作成用のjsonデータをGoogleスプレッドシートから作成

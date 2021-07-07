@@ -3,10 +3,6 @@
   "version": "0.0.0",
   "description": "Frontend Starter Kit",
   "main": "",
-  "engines": {
-    "node": ">=8.9.0",
-    "npm": ">=5.5.1"
-  },
   "babel": {
     "plugins": [
       "transform-object-assign"
@@ -82,8 +78,8 @@
   "scripts": {
     "start": "gulp",
     "dev": "gulp build",
-    "stag": "gulp build --env=stag",
-    "prod": "gulp build --env=prod",
+    "stg": "gulp build --env=stg",
+    "prd": "gulp build --env=prd",
     "lint": "gulp lint",
     "sharePage": "gulp sharePage",
     "data": "node ./tools/createData.js"
