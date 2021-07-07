@@ -38,7 +38,7 @@ const paths = {
     libs: [
       `${ROOT}/node_modules/jquery/dist/jquery.min.js`,
       `${ROOT}/node_modules/lodash/lodash.min.js`,
-      `${ROOT}/node_modules/gsap/src/minified/TweenMax.min.js`,
+      `${ROOT}/node_modules/gsap/dist/gsap.min.js`,
       // `${ROOT}/node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js`,
       // `${ROOT}/node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js`,
       // `${ROOT}/node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js`,

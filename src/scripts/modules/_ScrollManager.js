@@ -72,8 +72,9 @@ export function scrollTo(position) {
   }
   time /= 1000;
 
-  TweenMax.to($('body, html'), time, {
-    ease: Power4.easeOut,
+  gsap.to($('body, html'), {
+    duration: time,
+    ease: 'power4.out',
     scrollTop: position,
   });
 }
